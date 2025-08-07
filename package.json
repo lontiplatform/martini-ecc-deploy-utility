@@ -1,0 +1,48 @@
+{
+  "name": "martini-ecc-deploy-utility",
+  "version": "1.0.0",
+  "description": "Archives and deploys packages to Martini via Lonti ECC",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc && ncc build",
+    "format": "prettier --write '**/*.ts'",
+    "format-check": "prettier --check '**/*.ts'",
+    "lint": "eslint src/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lontiplatform/martini-ecc-deploy-utility.git"
+  },
+  "keywords": [
+    "lonti",
+    "lontiplatform",
+    "martini",
+    "ecc",
+    "deploy",
+    "utility"
+  ],
+  "author": "Rashed Obaid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lontiplatform/martini-ecc-deploy-utility/issues"
+  },
+  "homepage": "https://github.com/lontiplatform/martini-ecc-deploy-utility#readme",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "archiver": "^7.0.1",
+    "form-data": "^4.0.4",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/archiver": "^6.0.3",
+    "@types/node": "^20.4.2",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "@vercel/ncc": "^0.38.3",
+    "eslint": "^8.57.1",
+    "eslint-plugin-github": "^4.10.2",
+    "eslint-plugin-prettier": "^5.5.3",
+    "prettier": "^3.6.2",
+    "typescript": "^5.1.3"
+  }
+}
