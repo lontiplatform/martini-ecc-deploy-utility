@@ -1,0 +1,29 @@
+name: 'Martini ECC Deploy Utility'
+description: 'Archives and deploys packages to Martini via Lonti ECC.'
+author: 'Rashed Obaid <rashed.obaid@lonti.com>'
+inputs:
+  instance_name:
+    description: Name of the target instance
+    required: true
+  access_token:
+    description: Access token for Martini
+    required: true
+  base_dir:
+    description: >
+      Base directory for deployment
+      Default: `/github/workspace`
+  package_dir:
+    description: >
+      Directory containing packages to deploy
+      Default: `packages`
+  description:
+    description: >
+      Deployment description
+      Default: `Deployment using Martini ECC Deploy Utility`
+  tags:
+    description: >
+      Tags for this deployment
+      Default: `$GITHUB_REF_NAME`
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
